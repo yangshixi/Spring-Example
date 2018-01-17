@@ -4,9 +4,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
-
+	private static ApplicationContext ctx;
 	public static void main(String[] args) {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("aop02.xml");
+		ctx = new ClassPathXmlApplicationContext("aop02.xml");
 		Math math = ctx.getBean("math", Math.class);
 		int n1 = 100, n2 = 5;
 		math.add(n1, n2);
