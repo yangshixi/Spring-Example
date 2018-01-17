@@ -4,9 +4,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Test {
-
+	private static ApplicationContext ctx;
 	public static void main(String[] args) {
-		ApplicationContext ctx = new AnnotationConfigApplicationContext(ApplicationCfg.class);
+		ctx = new AnnotationConfigApplicationContext(ApplicationCfg.class);
 		Math math = ctx.getBean("math", Math.class);
 		int n1 = 100, n2 = 0;
 		math.add(n1, n2);
